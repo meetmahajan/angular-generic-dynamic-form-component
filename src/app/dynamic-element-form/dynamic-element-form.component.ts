@@ -2,7 +2,6 @@ import { Component, OnInit, Input } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 
 import { ElementAttribute } from '../element-attribute';
-import { ElementAttributeService } from '../element-attribute.service';
 
 @Component({
   selector: 'app-dynamic-element-form',
@@ -17,5 +16,4 @@ export class DynamicElementFormComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }
