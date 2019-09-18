@@ -27,7 +27,8 @@ export class ElementAttributeService {
       new ElementTextbox({
         key: 'firstName',
         label: 'First name',
-        value: 'Bombasto',
+        placeholder: 'Enter your name',
+        value: '',
         required: true,
         order: 1
       }),

@@ -10,6 +10,7 @@ export class ElementAttribute<T> {
   key: string;
   label: string;
   required: boolean;
+  placeholder: string;
   order: number;
   controlType: string;
 
@@ -22,6 +23,7 @@ export class ElementAttribute<T> {
     key?: string,
     label?: string,
     required?: boolean,
+    placeholder?: string,
     order?: number,
     controlType?: string
   } = {}) {
@@ -29,6 +31,7 @@ export class ElementAttribute<T> {
     this.key = options.key || '';
     this.label = options.label || '';
     this.required = !!options.required;
+    this.placeholder = options.placeholder === undefined ? '' : options.placeholder;
     this.order = options.order === undefined ? 1 : options.order;
     this.controlType = options.controlType || '';
   }
