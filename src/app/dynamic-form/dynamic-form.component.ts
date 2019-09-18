@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormGroup } from '@angular/forms';
 
 import { ElementAttribute } from '../element-attribute';
 import { ElementAttributeService } from '../element-attribute.service';
