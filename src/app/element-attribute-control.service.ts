@@ -8,7 +8,7 @@ export class ElementAttributeControlService {
 
   constructor() { }
 
-  toFormElementGroup(elementAttributes: ElementAttribute<any>[]) {
+  toFormElementGroup(elementAttributes:ElementAttribute<any>[]) {
     let group: any = {};
     elementAttributes.forEach(elementAttribute => {
       group[elementAttribute.key] = elementAttribute.required ? new FormControl(elementAttribute.value || '', Validators.required) : new FormControl(elementAttribute.value || '');

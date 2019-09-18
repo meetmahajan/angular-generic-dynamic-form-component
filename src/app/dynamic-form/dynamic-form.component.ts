@@ -8,7 +8,7 @@ import { ElementAttributeService } from '../element-attribute.service';
   selector: 'app-dynamic-form',
   templateUrl: './dynamic-form.component.html',
   styleUrls: ['./dynamic-form.component.css'],
-  providers:[ElementAttributeService]
+  providers: [ElementAttributeService]
 })
 export class DynamicFormComponent implements OnInit {
 
@@ -16,10 +16,13 @@ export class DynamicFormComponent implements OnInit {
   form: FormGroup;
   payLoad = '';
 
-  constructor(private eas: ElementAttributeService) { }
+  constructor(private eas: ElementAttributeService) {
+  }
 
   ngOnInit() {
     this.form = this.eas.toFormElementGroup(this.elementAttributes);
   }
-
+  onSubmit() {
+    this.payLoad = JSON.stringify(this.form.value);
+  }
 }

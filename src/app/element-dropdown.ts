@@ -1,7 +1,7 @@
 import { ElementAttribute } from './element-attribute';
 
 export class ElementDropdown extends ElementAttribute<string> {
-  controlTyepe = 'dropdown';
+  controlType = 'dropdown';
   options: { key: string, value: string }[] = [];
 
   constructor(options: {} = {}) {
